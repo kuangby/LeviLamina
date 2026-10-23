@@ -68,7 +68,7 @@ public:
         std::string_view                      name,
         std::string                           triggerButtonName,
         std::vector<std::string>              modifierButtonNames,
-        float                                 minHoldTime,
+        float                                 minHoldTime = 0.0f,
         std::function<bool(std::string_view)> mappingSwitchProvider =
             [](std::string_view mapping) { return mapping.starts_with("gamePlay"); },
         std::weak_ptr<mod::Mod> mod = mod::NativeMod::current()
